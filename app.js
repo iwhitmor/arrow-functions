@@ -186,13 +186,15 @@ console.log(joe);
 
 
 
-Student.prototype.greeting = function() {
-  return `Hi, my name is ${this.name}`;
-};
+// Student.prototype.greeting = function() {
+//   return `Hi, my name is ${this.name}`;
+// };
+
+student.prototype.greeting = () => (`Hi, my name is ${this.student}`);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -223,8 +225,8 @@ Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// I'm unsure. I'm pretty confused on the arrow functions as a whole. 
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// Unsure
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// "Arrow functions don't rebind the value of "this" when used inside of another function" - WesBos article on arrow functions
